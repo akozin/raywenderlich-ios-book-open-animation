@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BooksViewController: UICollectionViewController, UIViewControllerTransitioningDelegate {
+class BooksViewController: UICollectionViewController {
     
     var books: Array<Book>? {
         didSet {
@@ -84,7 +84,7 @@ class BooksViewController: UICollectionViewController, UIViewControllerTransitio
     func openBook(book: Book?) {
         let vc = storyboard?.instantiateViewControllerWithIdentifier("BookViewController") as BookViewController
         vc.book = selectedCell()?.book
-        // UICollectionView loads it's cells on a background thread, so make sure it's laoded before passing it to the animation handler
+        // UICollectionView loads it's cells on a background thread, so make sure it's loaded before passing it to the animation handler
         vc.view.snapshotViewAfterScreenUpdates(true)
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.navigationController?.pushViewController(vc, animated: true)
@@ -130,11 +130,11 @@ extension BooksViewController: UICollectionViewDataSource {
     
 }
 
-// MARK: UIViewControllerTransitioningDelegate
+// MARK: UIViewControllerAnimatedTransitioning
 
-extension BooksViewController: UIViewControllerTransitioningDelegate {
+extension BooksViewController {
     
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func animationControllerForPresentController(vc: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         var transition = BookOpeningTransition()
         transition.isPush = true
         transition.interactionController = interactionController
@@ -142,7 +142,7 @@ extension BooksViewController: UIViewControllerTransitioningDelegate {
         return transition
     }
     
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func animationControllerForDismissController(vc: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         var transition = BookOpeningTransition()
         transition.isPush = false
         transition.interactionController = interactionController

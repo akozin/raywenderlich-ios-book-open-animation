@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>cover</key>
-		<string>book-cover</string>
+		<string>Swift-cover</string>
 		<key>pages</key>
 		<array>
 			<string>page-blank</string>
@@ -19,7 +19,7 @@
 	</dict>
 	<dict>
 		<key>cover</key>
-		<string>book-cover</string>
+		<string>iOS8-cover</string>
 		<key>pages</key>
 		<array>
 			<string>page-blank</string>
@@ -34,7 +34,7 @@
 	</dict>
 	<dict>
 		<key>cover</key>
-		<string>book-cover</string>
+		<string>CoreData-cover</string>
 		<key>pages</key>
 		<array>
 			<string>page-blank</string>

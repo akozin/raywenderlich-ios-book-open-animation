@@ -25,37 +25,38 @@ class BookPageCell: UICollectionViewCell {
     func updateShadowLayer(animated: Bool = false) {
         var ratio: CGFloat = 0
         
-        var d = 1 - abs(getRatioFromTransform())
+        // Get ratio from transform. Check BookCollectionViewLayout for more details
+        var inverseRatio = 1 - abs(getRatioFromTransform())
         
         if !animated {
             CATransaction.begin()
-            CATransaction.setDisableActions(false)
+            CATransaction.setDisableActions(!animated)
         }
         
-        if !isRightPage {
-            shadowLayer.frame = CGRectMake(0, 0, 362, 568)
+        if isRightPage {
+            // Right page
             shadowLayer.colors = NSArray(objects:
-                UIColor.darkGrayColor().colorWithAlphaComponent(d * 0.30).CGColor,
-                UIColor.darkGrayColor().colorWithAlphaComponent(d * 0.40).CGColor,
-                UIColor.darkGrayColor().colorWithAlphaComponent(d * 0.50).CGColor,
-                UIColor.darkGrayColor().colorWithAlphaComponent(d * 0.55).CGColor
+                UIColor.darkGrayColor().colorWithAlphaComponent(inverseRatio * 0.45).CGColor,
+                UIColor.darkGrayColor().colorWithAlphaComponent(inverseRatio * 0.40).CGColor,
+                UIColor.darkGrayColor().colorWithAlphaComponent(inverseRatio * 0.55).CGColor
+            )
+            shadowLayer.locations = NSArray(objects:
+                NSNumber(float: 0.00),
+                NSNumber(float: 0.02),
+                NSNumber(float: 1.00)
+            )
+        } else {
+            // Left page
+            shadowLayer.colors = NSArray(objects:
+                UIColor.darkGrayColor().colorWithAlphaComponent(inverseRatio * 0.30).CGColor,
+                UIColor.darkGrayColor().colorWithAlphaComponent(inverseRatio * 0.40).CGColor,
+                UIColor.darkGrayColor().colorWithAlphaComponent(inverseRatio * 0.50).CGColor,
+                UIColor.darkGrayColor().colorWithAlphaComponent(inverseRatio * 0.55).CGColor
             )
             shadowLayer.locations = NSArray(objects:
                 NSNumber(float: 0.00),
                 NSNumber(float: 0.50),
                 NSNumber(float: 0.98),
-                NSNumber(float: 1.00)
-            )
-        } else {
-            shadowLayer.frame = CGRectMake(0,  0, 362, 568)
-            shadowLayer.colors = NSArray(objects:
-                UIColor.darkGrayColor().colorWithAlphaComponent(d * 0.45).CGColor,
-                UIColor.darkGrayColor().colorWithAlphaComponent(d * 0.40).CGColor,
-                UIColor.darkGrayColor().colorWithAlphaComponent(d * 0.55).CGColor
-            )
-            shadowLayer.locations = NSArray(objects:
-                NSNumber(float: 0.00),
-                NSNumber(float: 0.02),
                 NSNumber(float: 1.00)
             )
         }
@@ -115,12 +116,18 @@ class BookPageCell: UICollectionViewCell {
     func initShadowLayer() {
         var shadowLayer = CAGradientLayer()
         
-        shadowLayer.frame = CGRectMake(0, 0, 362, 568)
+        shadowLayer.frame = bounds
         shadowLayer.startPoint = CGPointMake(0, 0.5)
         shadowLayer.endPoint = CGPointMake(1, 0.5)
         
         self.imageView.layer.addSublayer(shadowLayer)
         self.shadowLayer = shadowLayer
+    }
+    
+    override var bounds: CGRect {
+        didSet {
+            shadowLayer.frame = bounds
+        }
     }
     
 }

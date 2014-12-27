@@ -16,16 +16,15 @@ class CustomNavigationViewController: UINavigationController, UINavigationContro
     }
 
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        // Check if the parent view controller implements interactive transitioning
         if operation == .Push {
-            if let vc = fromVC as? UIViewControllerTransitioningDelegate {
-                return vc.animationControllerForPresentedController?(toVC, presentingController: fromVC, sourceController: UIViewController())
+            if let vc = fromVC as? BooksViewController {
+                return vc.animationControllerForPresentController(toVC)
             }
         }
         
         if operation == .Pop {
-            if let vc = toVC as? UIViewControllerTransitioningDelegate {
-                return vc.animationControllerForDismissedController?(fromVC)
+            if let vc = toVC as? BooksViewController {
+                return vc.animationControllerForDismissController(vc)
             }
         }
         
@@ -33,7 +32,6 @@ class CustomNavigationViewController: UINavigationController, UINavigationContro
     }
 
     func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        // Check if the animationController is a BookOpeningTransition
         if let animationController = animationController as? BookOpeningTransition {
             return animationController.interactionController
         }
