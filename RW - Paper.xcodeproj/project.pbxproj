@@ -13,16 +13,12 @@
 		9A0BA4B71A3F0721004FC741 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A80C44F1A2C844B00725F32 /* Images.xcassets */; };
 		9A142CDB1A404FBD0093DFB7 /* UIImage+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A142CDA1A404FBD0093DFB7 /* UIImage+Helpers.swift */; };
 		9A3150FF1A334BA00014C868 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3150FE1A334BA00014C868 /* BooksViewController.swift */; };
-		9A3151011A334ECE0014C868 /* BooksLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3151001A334ECE0014C868 /* BooksLayout.swift */; };
 		9A80C4491A2C844B00725F32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80C4481A2C844B00725F32 /* AppDelegate.swift */; };
 		9A80C44B1A2C844B00725F32 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80C44A1A2C844B00725F32 /* BookViewController.swift */; };
 		9A80C44E1A2C844B00725F32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A80C44C1A2C844B00725F32 /* Main.storyboard */; };
 		9A80C45F1A2C844C00725F32 /* RW___PaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80C45E1A2C844C00725F32 /* RW___PaperTests.swift */; };
-		9A80C4691A2C869900725F32 /* BookLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80C4681A2C869900725F32 /* BookLayout.swift */; };
 		9A80C46B1A2C875200725F32 /* BookPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A80C46A1A2C875200725F32 /* BookPageCell.swift */; };
 		9ABED16E1A33A5ED00410347 /* BookCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABED16D1A33A5ED00410347 /* BookCoverCell.swift */; };
-		9ABED19E1A34656100410347 /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABED19D1A34656100410347 /* CustomNavigationViewController.swift */; };
-		9ABED1A11A34859400410347 /* BookOpeningTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABED1A01A34859400410347 /* BookOpeningTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +37,6 @@
 		9A0BA4B31A3EDF25004FC741 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		9A142CDA1A404FBD0093DFB7 /* UIImage+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Helpers.swift"; sourceTree = "<group>"; };
 		9A3150FE1A334BA00014C868 /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
-		9A3151001A334ECE0014C868 /* BooksLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksLayout.swift; sourceTree = "<group>"; };
 		9A80C4431A2C844B00725F32 /* RW - Paper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RW - Paper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A80C4471A2C844B00725F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A80C4481A2C844B00725F32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,11 +46,8 @@
 		9A80C4581A2C844C00725F32 /* RW - PaperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RW - PaperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A80C45D1A2C844C00725F32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A80C45E1A2C844C00725F32 /* RW___PaperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RW___PaperTests.swift"; sourceTree = "<group>"; };
-		9A80C4681A2C869900725F32 /* BookLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookLayout.swift; sourceTree = "<group>"; };
 		9A80C46A1A2C875200725F32 /* BookPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookPageCell.swift; sourceTree = "<group>"; };
 		9ABED16D1A33A5ED00410347 /* BookCoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCoverCell.swift; sourceTree = "<group>"; };
-		9ABED19D1A34656100410347 /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
-		9ABED1A01A34859400410347 /* BookOpeningTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookOpeningTransition.swift; sourceTree = "<group>"; };
 		9AF9462D1A3112DF003693FD /* RW - Paper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RW - Paper-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,14 +87,6 @@
 			name = "View controller";
 			sourceTree = "<group>";
 		};
-		9A142CDD1A4057880093DFB7 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				9A3151001A334ECE0014C868 /* BooksLayout.swift */,
-			);
-			name = Layout;
-			sourceTree = "<group>";
-		};
 		9A142CDE1A40578D0093DFB7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,14 +103,6 @@
 			name = "View controller";
 			sourceTree = "<group>";
 		};
-		9A142CE01A40579C0093DFB7 /* Layouit */ = {
-			isa = PBXGroup;
-			children = (
-				9A80C4681A2C869900725F32 /* BookLayout.swift */,
-			);
-			name = Layouit;
-			sourceTree = "<group>";
-		};
 		9A142CE11A4057A20093DFB7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +116,6 @@
 			children = (
 				9A3151021A3353DE0014C868 /* Books */,
 				9A3151031A3353E70014C868 /* Book */,
-				9ABED19D1A34656100410347 /* CustomNavigationViewController.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -165,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				9A142CDC1A4057830093DFB7 /* View controller */,
-				9A142CDD1A4057880093DFB7 /* Layout */,
 				9A142CDE1A40578D0093DFB7 /* Cell */,
 			);
 			name = Books;
@@ -175,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				9A142CDF1A4057920093DFB7 /* View controller */,
-				9A142CE01A40579C0093DFB7 /* Layouit */,
 				9A142CE11A4057A20093DFB7 /* Cell */,
 			);
 			name = Book;
@@ -205,7 +178,6 @@
 				9A80C4481A2C844B00725F32 /* AppDelegate.swift */,
 				9A142CE21A4057CD0093DFB7 /* App */,
 				9A0BA4B51A3EE0D0004FC741 /* Data models */,
-				9ABED19F1A34857A00410347 /* Custom transitions */,
 				9AF946311A31130C003693FD /* Helpers */,
 				9A142CE31A4058ED0093DFB7 /* Storyboards */,
 				9A142CE41A4058F60093DFB7 /* Assets */,
@@ -238,14 +210,6 @@
 				9A80C45D1A2C844C00725F32 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9ABED19F1A34857A00410347 /* Custom transitions */ = {
-			isa = PBXGroup;
-			children = (
-				9ABED1A01A34859400410347 /* BookOpeningTransition.swift */,
-			);
-			name = "Custom transitions";
 			sourceTree = "<group>";
 		};
 		9AF946311A31130C003693FD /* Helpers */ = {
@@ -300,14 +264,16 @@
 		9A80C43B1A2C844B00725F32 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "-";
 				TargetAttributes = {
 					9A80C4421A2C844B00725F32 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0830;
 					};
 					9A80C4571A2C844C00725F32 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 9A80C4421A2C844B00725F32;
 					};
 				};
@@ -356,15 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ABED1A11A34859400410347 /* BookOpeningTransition.swift in Sources */,
 				9ABED16E1A33A5ED00410347 /* BookCoverCell.swift in Sources */,
 				9A0BA4B21A3EDF20004FC741 /* BookStore.swift in Sources */,
 				9A142CDB1A404FBD0093DFB7 /* UIImage+Helpers.swift in Sources */,
-				9ABED19E1A34656100410347 /* CustomNavigationViewController.swift in Sources */,
-				9A3151011A334ECE0014C868 /* BooksLayout.swift in Sources */,
 				9A80C44B1A2C844B00725F32 /* BookViewController.swift in Sources */,
 				9A80C46B1A2C875200725F32 /* BookPageCell.swift in Sources */,
-				9A80C4691A2C869900725F32 /* BookLayout.swift in Sources */,
 				9A80C4491A2C844B00725F32 /* AppDelegate.swift in Sources */,
 				9A0BA4B41A3EDF25004FC741 /* Book.swift in Sources */,
 				9A3150FF1A334BA00014C868 /* BooksViewController.swift in Sources */,
@@ -414,15 +376,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -457,8 +423,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -466,6 +434,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -475,6 +444,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -485,11 +455,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "RW - Paper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RW - Paper/RW - Paper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -498,10 +471,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "RW - Paper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RW - Paper/RW - Paper-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -519,7 +495,9 @@
 				);
 				INFOPLIST_FILE = "RW - PaperTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RW - Paper.app/RW - Paper";
 			};
 			name = Debug;
@@ -534,7 +512,9 @@
 				);
 				INFOPLIST_FILE = "RW - PaperTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RW - Paper.app/RW - Paper";
 			};
 			name = Release;

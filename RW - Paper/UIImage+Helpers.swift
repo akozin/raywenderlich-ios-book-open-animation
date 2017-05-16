@@ -10,34 +10,34 @@ import UIKit
 
 extension UIImage {
     
-    func imageWithRoundedCornersSize(cornerRadius: CGFloat, corners: UIRectCorner) -> UIImage {
+    func imageWithRoundedCornersSize(_ cornerRadius: CGFloat, corners: UIRectCorner) -> UIImage {
         UIGraphicsBeginImageContext(self.size)
         
-        UIBezierPath(roundedRect: CGRectMake(00, 0, self.size.width, self.size.height), byRoundingCorners: corners, cornerRadii: CGSizeMake(cornerRadius, cornerRadius)).addClip()
-        drawInRect(CGRectMake(0, 0, self.size.width, self.size.height))
+        UIBezierPath(roundedRect: CGRect(x: 00, y: 0, width: self.size.width, height: self.size.height), byRoundingCorners: corners, cornerRadii: CGSize(width: cornerRadius, height: cornerRadius)).addClip()
+        draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
         
-        var image = UIGraphicsGetImageFromCurrentImageContext()
+        let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return image
+        return image!
     }
     
-    func imageByScalingAndCroppingForSize(targetSize: CGSize) -> UIImage {
-        var sourceImage = self
+    func imageByScalingAndCroppingForSize(_ targetSize: CGSize) -> UIImage {
+        let sourceImage = self
         var newImage = UIImage()
-        var imageSize = sourceImage.size
-        var width = imageSize.width
-        var height = imageSize.height
-        var targetWidth = targetSize.width
-        var targetHeight = targetSize.height
+        let imageSize = sourceImage.size
+        let width = imageSize.width
+        let height = imageSize.height
+        let targetWidth = targetSize.width
+        let targetHeight = targetSize.height
         var scaleFactor: CGFloat = 0.0
         var scaledWidth = targetWidth
         var scaledHeight = targetHeight
-        var thumbnailPoint = CGPointMake(0.0,0.0)
+        var thumbnailPoint = CGPoint(x: 0.0,y: 0.0)
         
-        if CGSizeEqualToSize(imageSize, targetSize) == false {
-            var widthFactor = targetWidth / width
-            var heightFactor = targetHeight / height
+        if imageSize.equalTo(targetSize) == false {
+            let widthFactor = targetWidth / width
+            let heightFactor = targetHeight / height
             
             if (widthFactor > heightFactor) {
                 scaleFactor = widthFactor
@@ -61,14 +61,14 @@ extension UIImage {
         
         UIGraphicsBeginImageContext(targetSize)
         
-        var thumbnailRect = CGRectZero
+        var thumbnailRect = CGRect.zero
         thumbnailRect.origin = thumbnailPoint
         thumbnailRect.size.width  = scaledWidth
         thumbnailRect.size.height = scaledHeight
         
-        sourceImage.drawInRect(thumbnailRect)
+        sourceImage.draw(in: thumbnailRect)
         
-        newImage = UIGraphicsGetImageFromCurrentImageContext()
+        newImage = UIGraphicsGetImageFromCurrentImageContext()!
         
         UIGraphicsEndImageContext()
         
